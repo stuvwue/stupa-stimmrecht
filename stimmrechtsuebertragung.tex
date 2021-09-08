@@ -1,0 +1,68 @@
+\documentclass[fontsize=16pt]{scrartcl} % 10pt font size default, 11pt and 12pt are also possible
+
+\usepackage[ngerman]{babel}
+\usepackage{geometry} % Required for adjusting page dimensions
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fontspec}
+\usepackage[xetex]{eforms}
+\usepackage{setspace}
+
+% fix braindamaged parindent
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\thispagestyle{empty}
+
+\geometry{
+    paper=a4paper, % Change to letterpaper for US letter
+    top=1.5cm, % Top margin
+    bottom=2.5cm, % Bottom margin
+    left=2.5cm, % Left margin
+    right=2.5cm, % Right margin
+    %showframe, % Uncomment to show how the type block is set on the page
+}
+
+\setmainfont{Source Sans 3}
+%\textSizeDefault{0}
+\textSizeDefault{15}
+
+\begin{document}
+
+    \includegraphics[height=22mm,keepaspectratio, trim={0 0 0 0},clip=true]{konvent_banner}
+    \vspace{0.5 cm}
+    \begin{center}\bfseries \sffamily
+        \LARGE Stimmrechtsübertragung für den Studentischen Konvent
+    \end{center}
+    \vspace{0.7cm}
+
+    \vspace{0.5 cm}
+    \doublespacing
+    Hiermit übertrage ich, \raisebox{2pt}{\textField[\S{U}]{Name}{7.5cm}{16pt}}, mein
+    Stimmrecht für die Sitzung des Studentischen Konvent der Universität Würzburg
+    am \raisebox{2pt}{\textField[\S{U}]{Datum}{6cm}{16pt}} gemäß §1 der
+    Geschäftsordnung
+
+    \begin{itemize}
+      \item \raisebox{2pt}{\checkBox{choice}{16pt}{16pt}{A}} für die 
+        gesamte Sitzung
+      \item \raisebox{2pt}{\checkBox{choice}{16pt}{16pt}{B}}
+        von \raisebox{2pt}{\textField[\S{U}]{Von}{4cm}{16pt}} 
+        bis \raisebox{2pt}{\textField[\S{U}]{Von}{4cm}{16pt}}
+    \end{itemize}
+
+    auf \raisebox{2pt}{\textField[\S{U}]{Empfaenger}{9cm}{16pt}}.
+
+    \vspace{5cm}
+
+    \onehalfspacing
+    \begin{tabular}{ll}
+      \raisebox{2pt}{\textField[\S{U}]{OrtDatum}{7cm}{16pt}}& 
+      \hspace{1cm}\raisebox{2pt}{\textField[\Ff{\FfReadOnly}\S{U}]{Unterschrift}{7cm}{16pt}}\\
+      Ort, Datum &\hspace{1cm} Unterschrift
+    \end{tabular}
+
+
+\end{document}
+
